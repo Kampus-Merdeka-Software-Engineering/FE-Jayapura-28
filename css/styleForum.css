@@ -1,5 +1,8 @@
+*{
+    font-family: 'comic sans ms';
+}
+
 body {
-     font-family: 'comic sans ms';
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -7,7 +10,7 @@ body {
 
 header {
     text-align: center;
-    background-color:#3f72af ;
+    background-color:#0b99a7 ;
     color: #fff;
     padding: 10px 0;
 }
@@ -53,7 +56,7 @@ textarea {
 }
 
 button {
-    background-color: #3f72af;
+    background-color: #37c4aa;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -62,7 +65,7 @@ button {
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #0b99a7;
 }
 
 /* Style untuk pesan pengguna yang berbeda */

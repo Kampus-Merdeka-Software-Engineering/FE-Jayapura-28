@@ -2,17 +2,20 @@
     text-decoration: none;
     margin: 0px;
     padding: 0px;
+    font-family: 'comic sans ms';
 }
 
 body {    
     margin: 0px;
     padding: 0px;
-    font-family: 'Open Sans', sans-serif;
+    
+  
 }
 
 .logo img{
-    margin: 0;
-    width: 6%;
+
+margin-top: 12px;
+    width: 5%;
     float: left;
 }
 
@@ -36,7 +39,7 @@ body {
 }
 
 a.tbl-biru{
-    background: #3f72af;
+    background: #37c4aa;
     border-radius: 20px;
     margin-top: 20px;
     padding: 15px 20px 15px 20px;
@@ -46,12 +49,12 @@ a.tbl-biru{
 }
 
 a.tbl-biru:hover{
-    background: #fc5185;
-    text-decoration: none;
+    background: #0b99a7;
+   
 }
 
 a.tbl-pink{
-    background: #fc5185;
+    background: #37c4aa;
     border-radius: 20px;
     margin-top: 20px;
     padding: 15px 20px 15px 20px;
@@ -61,7 +64,7 @@ a.tbl-pink{
 }
 
 a.tbl-pink:hover{
-    background:#3f72af ;
+    background:#0b99a7 ;
     text-decoration: none;
 }
 
@@ -116,12 +119,10 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    font-weight: 800;
+    font-weight: 900;
+    font-size: large;
 }
 
-nav ul li a:active{
-    font-weight: 900;
-}
 
 #Home{
     background-color: #ffffff;
@@ -134,7 +135,6 @@ nav ul li a:active{
 #Home .kolom .deskripsi{
     font-size: 18px;
     font-weight: bold;
-    font-family: 'comic sans ms';
     color: #364f6b;
     margin-bottom: 10px;
 }
@@ -142,7 +142,6 @@ nav ul li a:active{
 .kolom .deskripsi{
     font-size: 18px;
     font-weight: bold;
-    font-family: 'comic sans ms';
     color: #364f6b;
     margin-bottom: 10px;
 }
@@ -152,7 +151,6 @@ nav ul li a:active{
 }
 
 h2{
-    font-family: 'comic sans ms';
     font-weight: 800;
     font-size: 45px;
     margin-bottom: 20px;
@@ -170,7 +168,6 @@ h2{
 #info .deskripsi{
     font-size: 24px;
     font-weight: bold;
-    font-family: 'comic sans ms';
     color: #364f6b;
     padding-top: 120px;
     margin-bottom: 10px;
@@ -183,7 +180,6 @@ h2{
 }
 
 #info h2{
-    font-family: 'comic sans ms';
     font-weight: 800;
     font-size: 45px;
     color: #364f6b;
@@ -200,14 +196,12 @@ h2{
 .artikel-desc{
     display:block;
     border:none;
-    box-shadow: 0px 1px 4px;
     padding: 20px;
     margin-bottom: 5px;
 }
 
 .artikel-desc:hover{
     display:block;
-    box-shadow: 2px 5px 6px;
     padding: 21px;
     margin-bottom: 5px;
     cursor: pointer;
@@ -298,6 +292,10 @@ p{
     text-align: center;
 }
 
+.kartu-doctor p:hover{
+    font-size: 30px;
+}
+
 
 .partner-list{
     width: 100%;
@@ -319,7 +317,7 @@ p{
 
  /* Style untuk footer */
  .footer {
-    background-color: #333;
+    background-color: #003659;
     color: #fff;
     padding: 20px;
     display: flex;
@@ -455,12 +453,12 @@ footer p{
 
 .btn-floating.icon{
     bottom: 25px;
-    background-color: #3f72af;
-    border: 2px solid #fc5185;
+    background-color: #37c4aa;
+
 }
 
 .btn-floating.icon:hover{
-    background-color: #3f72af;
+    background-color: #0b99a7;
 }
 
 
@@ -544,11 +542,9 @@ footer p{
         width: 30%;
         margin-bottom: 20px;
     }
+
 }
 
 label{
     font-family: 'comic sans ms';
 }
-
-
-  

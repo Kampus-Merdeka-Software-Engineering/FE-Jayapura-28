@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -49,20 +50,19 @@ h1{
 button {
     border: transparent;
     width: auto;
-    background-color: dodgerblue;
+    background-color: #37c4aa;
     color: white;
     padding: 10px;
     margin: auto;
     display: flex;
     justify-content: center;
-    border-radius: 2px;
+    border-radius: 20px;
     font-weight: bold;
     float: left;
 }
 
 button:hover {
-    background-color: rgb(32, 135, 238);
-    box-shadow: 1px 1px gray;
+    background-color: #0b99a7;
 }
 
 @media screen and (max-width : 991.98px) {
