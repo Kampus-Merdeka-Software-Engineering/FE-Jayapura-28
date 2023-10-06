@@ -548,3 +548,26 @@ footer p{
 label{
     font-family: 'comic sans ms';
 }
+
+
+
+/* CSS untuk gambar profil */
+.profile-image {
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 10px; /* Menambahkan jarak antara gambar profil dan pop-up */
+}
+
+/* CSS untuk kontainer pop-up (opsional) */
+.popup-container {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 10px; /* Menggeser pop-up ke kanan */
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}

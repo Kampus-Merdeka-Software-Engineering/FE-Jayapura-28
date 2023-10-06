@@ -92,9 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const pdfOptions = { margin: 10, filename: "booking_dokter.pdf", image: { type: "jpeg", quality: 0.98 } }
         
         html2pdf().from(element).set(pdfOptions).save();
-        
 
-
-    
     });
+
 });
