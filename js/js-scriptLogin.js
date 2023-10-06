@@ -1,8 +1,39 @@
 // login.js
-
 const wrapper = document.querySelector(".wrapper"),
 signupHeader = document.querySelector(".signup header"),
 loginHeader = document.querySelector(".login header");
+const loginForm = document.getElementById('login-form');
+const message = document.getElementById('message');
+
+loginForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  try {
+    const response = await fetch('/api/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ username, password }),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      message.innerText = data.message;
+      // Redirect atau tampilkan halaman beranda setelah login berhasil
+    } else {
+      message.innerText = data.message;
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
+});
+
+
 
 loginHeader.addEventListener("click", () => {
 wrapper.classList.add("active");
