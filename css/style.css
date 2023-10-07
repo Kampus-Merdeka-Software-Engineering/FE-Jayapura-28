@@ -14,7 +14,7 @@ body {
 
 .logo img{
 
-margin-top: 12px;
+    margin-top: 12px;
     width: 5%;
     float: left;
 }
@@ -327,8 +327,10 @@ p{
 }
 
 /* Style untuk logo di sebelah kiri */
-.logo {
-    order: 1;
+.logoft img{
+    width: 80px;
+    margin-left: 10px;
+
 }
 
 
@@ -478,11 +480,12 @@ footer p{
         width: 90%;
     }
     .logo img{
-        display:inline-block;
+        float: none;
+        display:block;
         width: 5em;
-        margin-left: 5px;
-        margin-top: auto;
-        margin-bottom: auto;
+        margin-right: auto;
+        margin-left: auto;
+       
     }
 
     nav .menu{
@@ -552,6 +555,141 @@ footer p{
     .kartu-partner{
         width: 30%;
         margin-bottom: 20px;
+    }
+
+        
+    /* Style untuk footer */
+    .footer {
+        background-color: #003659;
+        color: #fff;
+        padding: 10px;
+        display: flex;  
+    }
+
+    /* Style untuk logo di sebelah kiri */
+    .logoft img{
+       width: 40px;
+       margin-left: 25px;
+       margin-top: 10px;
+    }
+
+
+    /* Style untuk ikon media sosial */
+    .social-icons {
+        margin-top: 10px;
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .social-icons li {
+        margin-right: 5px;
+    }
+
+    .social-icons i {
+        font-size: 18px;
+        color: #fff;
+        transition: color 0.3s;
+    }
+
+    .social-icons i:hover {
+        color: #007bff;
+    }
+
+    /* Style untuk informasi "Tentang", "Kontak", dan "Untuk Mitra" */
+    .info-section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .info-item1 {
+        text-align: left;
+        margin: 0 2px;
+        
+    }
+
+
+    .info-item1 p {
+        text-align: left;
+        margin: 0 2px;
+        font-size: 12px;
+        padding: 2px;
+        
+    }
+
+    .info-item2 {
+        text-align: left;
+        margin: 0 2px;
+    }
+
+    .info-item2 p {
+        text-align: left;
+        margin: 0 2px;
+        font-size: 12px;
+        padding: 2px;
+    }
+
+    .info-item3 {
+        text-align: left;
+        margin: 0 2px;
+    }
+
+    .info-item3 p{
+        text-align: left;
+        margin: 0 2px;
+        font-size: 12px;
+        padding: 2px;
+    }
+
+    .info-item4 {
+        text-align: left;
+        margin: 0 2px;
+    }
+
+    .info-item4 p {
+        text-align: left;
+        margin-left: 4px;
+        font-size: 12px;
+        padding: 2px;
+    }
+
+    .info-item1 h3 {
+        font-size: 12px;
+        margin-left: 3px;
+    }
+
+    .info-item2 h3 {
+        font-size: 12px;
+    }
+
+    .info-item3 h3 {
+        font-size: 12px;
+    }
+
+    .info-item4 h3 {
+        font-size: 12px;
+        margin-left: 4px;
+    }
+
+    footer p{
+        color: #fff;
+        font-family: Arial, sans-serif;
+        font-weight: normal;
+        margin: 0 auto;
+    }
+
+     .cp2{
+        font-size: 12px;
+    }
+
+    .booking-result h2{
+        font-size: 25px;
+    }
+
+    .container h2{
+        font-size: 25px;
+
     }
 
 }
