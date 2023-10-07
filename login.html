@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HealthCare-Sign Up</title>
+    <title>Ralth - Sign Up</title>
     <link rel="stylesheet" href="css/styleLogin.css" />
+    <link rel="shortcut icon" href="img/logo.jpeg">
   </head>
   <body>
     <section class="wrapper">
       <div class="form signup">
         <header>Signup</header>
-        <form action="#">
-          <input type="text" placeholder="Full name" required />
-          <input type="text" placeholder="Email address" required />
-          <input type="password" placeholder="Password" required />
+        <form id="regisForm" action="#">
+          <input id="fullname" type="text" placeholder="Full name" required />
+          <input id="email1" type="text" placeholder="Email address" required />
+          <input id="password1" type="password" placeholder="Password" required />
           <div class="checkbox">
             <input type="checkbox" id="signupCheck" />
             <label for="signupCheck">I accept all terms & conditions</label>
@@ -22,19 +23,15 @@
         </form>
       </div>
 
-      <div class="form login">
+      <div id="login" class="form login">
         <header>Login</header>
-        <form id="login-form" action="index.html">
-          <input type="text" placeholder="Email address" required />
-          <input type="password" placeholder="Password" required />
+        <form id="login-Form" action="index.html">
+          <input id="email" type="text" placeholder="Email address" required />
+          <input id="password" type="password" placeholder="Password" required />
           <a href="#">Forgot password?</a>
           <input type="submit" value="Login" />
         </form>
       </div>
-
-      <script>
-      
-      </script>
 
       <script src="js/js-scriptLogin.js"></script>
     </section>

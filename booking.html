@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking Dokter</title>
+    <title>Ralth - Booking</title>
     <link rel="shortcut icon" href="img/logo.jpeg">
     <link rel="stylesheet" href="css/styleBooking.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
@@ -14,18 +15,16 @@
         <div class="wrapper">
             <div class="logo">
                 <img src="img/logo.jpeg" alt="healtcare-logo">                
-                <input id="search-bar" type="text" placeholder="search ....">
-                <a id="search-icon" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html #info">Information</a></li>
-                    <li><a href="index.html #doctor">Doctor</a></li>
-                    <li><a href="booking.html">Booking</a></li>
-                    <li><a href="index.html #Partners">Partners</a></li>
-                    <li><a href="ContactUs.html">Contact Us</a></li>
-                    <li><a href="login.html" class="tbl-biru">Sign Up</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/index.html #info">Information</a></li>
+                    <li><a href="/index.html #doctor">Doctor</a></li>
+                    <li><a href="/booking.html">Booking</a></li>
+                    <li><a href="/index.html #Partners">Partners</a></li>
+                    <li><a href="/ContactUs.html">Contact Us</a></li>
+                    <li><a href="/login.html" class="tbl-biru">Sign Up</a></li>
                 </ul>
 
             </div>
@@ -33,70 +32,57 @@
     </nav><br>
 
     <div class="container">
-        <h2>Booking Dokter</h2>
+        <h2>Booking Doctor</h2>
         <form id="bookingForm">
-            <label for="nama">Nama:</label>
+            <label for="nama">Name:</label>
             <input type="text" id="nama" class="input-field" placeholder="Input Your Name" required><br>
 
-            <label for="nomor">Nomor:</label>
+            <label for="nomor">Number:</label>
             <input type="tel" id="nomor" class="input-field"  placeholder="Input Your Number" ><br>
 
-            <label for="spesialis">Pilihan Spesialis:</label>
+            <label for="rumahSakit">Choose a Hospital:</label>
+            <select id="rumahSakit" class="input-field" required>
+                <option value="#">-- Select Hospital --</option>
+                <option value="RSUD Boven Digeol">RSUD Boven Digeol</option>
+                <option value="RSUD Kwaingga">RSUD Kwaingga</option>
+                <option value="RSUD Kabupaten Mappi">RSUD Kabupaten Mappi</option>
+                <option value="RSUD Paniai">RSUD Paniai</option>
+            </select><br>
+
+            <label for="spesialis">Choose a Specialist:</label>
             <select id="spesialis" class="input-field" required>
-                <option value="#">--..--..</option>
-                <option value="Spesialis A">Spesialis A</option>
-                <option value="Spesialis B">Spesialis B</option>
-                <option value="Spesialis C">Spesialis C</option>
+                <!-- Options will be populated dynamically based on user's choice of hospital -->
             </select><br>
 
-                        <label for="dokter">Pilihan Dokter:</label>
-            <select id="dokter" class="input-field"  required>
-                <!-- Pilihan Dokter untuk Spesialis A -->
-                <optgroup id="dokterA" label="Pilihan Dokter untuk Spesialis A">
-                    <option value="#">--..--..</option>
-                    <option value="Dokter X">Dokter X</option>
-                    <option value="Dokter Y">Dokter Y</option>
-                    <option value="Dokter Z">Dokter Z</option>
-                </optgroup>
-                <!-- Pilihan Dokter untuk Spesialis B -->
-                <optgroup id="dokterB" label="Pilihan Dokter untuk Spesialis B">
-                    <option value="#">--..--..</option>
-                    <option value="Dokter P">Dokter P</option>
-                    <option value="Dokter Q">Dokter Q</option>
-                    <option value="Dokter R">Dokter R</option>
-                </optgroup>
-                <!-- Pilihan Dokter untuk Spesialis C -->
-                <optgroup id="dokterC" label="Pilihan Dokter untuk Spesialis C">
-                    <option value="#">--..--..</option>
-                    <option value="Dokter F">Dokter F</option>
-                    <option value="Dokter G">Dokter G</option>
-                    <option value="Dokter H">Dokter H</option>
-                </optgroup>
+            <label for="dokter">Choose a Doctor:</label>
+            <select id="dokter" class="input-field" required>
+                <!-- Options will be populated dynamically based on user's choice of specialist -->
             </select><br>
 
-            <label for="tanggal">Tanggal Booking:</label>
+            <label for="tanggal">Date:</label>
             <input type="date" id="tanggal" class="input-field" required><br>
 
-            <label for="waktu">Waktu:</label>
+            <label for="waktu">Time:</label>
             <input type="time" id="waktu" class="input-field" required><br>
 
-            <label for="alamat">Alamat:</label>
+            <label for="alamat">Address:</label>
             <textarea id="alamat" class="input-field" placeholder="Input Your Address"  required></textarea><br>
 
             <button type="submit" class="submit-button">Booking</button>
         </form>
         <div id="hasilBooking" class="booking-result">
-            <h2>Hasil Booking</h2>
+            <h2>Result Booking</h2>
             <table id="hasilTabel" class="styled-table">
                 <thead>
                     <tr>
-                        <th>Nama</th>
-                        <th>Nomor</th>
-                        <th>Spesialis</th>
-                        <th>Dokter</th>
-                        <th>Tanggal</th>
-                        <th>Waktu</th>
-                        <th>Alamat</th>
+                        <th>Name</th>
+                        <th>Number</th>
+                        <th>Hospital</th>
+                        <th>Specialist</th>
+                        <th>Doctor</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Address</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -116,27 +102,29 @@
                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                 </ul>
-
         </div>
         <div class="info-section">
-            <div class="info-item">
+            <div class="info-item1">
                 <h3>About</h3>
                 <p>
-                    We are website for support an 
+                    We are a website that supports <br> health services in the Papua region in particular
                 </p>
             </div>
-            <div class="info-item">
-                <h3>Contact</h3>
-                <p>
-                    Contact Us: email@example.com<br>
-                    Telp: (123) 456-7890
-                </p>
+            <div class="info-item2">
+                <h3>Service</h3>
+                <p>Healthcare</p>
+                <p>Information Doctor</p>
+                <p>Booking Doctor</p>
+                <p>Forum</p>
             </div>
-            <div class="info-item">
+            <div class="info-item3">
                 <h3>For Partner's</h3>
-                <p>
-                    Thank's for support 
-                </p>
+                <p>Thank's for support </p>
+            </div>
+            <div class="info-item4">
+                <h3>Contact</h3>
+                <p>Contact Us: ralth@gmail.com</p>
+                <p>Telp: (+62) 852-3446-6532</p>
             </div>
         </div>
     </footer>
