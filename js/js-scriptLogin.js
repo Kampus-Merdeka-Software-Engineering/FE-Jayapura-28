@@ -23,7 +23,7 @@ loginForm.addEventListener("submit", async(e) => {
     const password = document.getElementById("password").value;
 
     try {
-        const response = await fetch("http://localhost:5000/login", {
+        const response = await fetch("https://be-jayapura-28-production.up.railway.app/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -62,7 +62,7 @@ regisForm.addEventListener("submit", async (e) => {
   const password = document.getElementById("password1").value;
 
   try {
-    const response = await fetch("http://localhost:5000/register", {
+    const response = await fetch("https://be-jayapura-28-production.up.railway.app/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

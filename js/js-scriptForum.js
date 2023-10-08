@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Mengirimkan permintaan booking dengan token dalam header
-        fetch("http://localhost:5000/forum", {
+        fetch("https://be-jayapura-28-production.up.railway.app/forum", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

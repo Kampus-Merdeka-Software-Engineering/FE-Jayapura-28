@@ -8,7 +8,7 @@ feedbackForm.addEventListener("submit", async function(event) {
 
     // Mengirim data ke server
     try {
-        const response = fetch("http://localhost:5000/submit", {
+        const response = fetch("https://be-jayapura-28-production.up.railway.app/submit", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
