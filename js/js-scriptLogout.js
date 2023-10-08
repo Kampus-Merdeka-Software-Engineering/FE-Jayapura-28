@@ -4,6 +4,18 @@
     const popupContainer = document.getElementById('popupContainer');
     const logoutButton = document.getElementById('logoutButton');
 
+
+// Fungsi untuk logout pengguna
+function logout() {
+    // Hapus token dari localStorage, sessionStorage, atau cookie
+    localStorage.removeItem("token");
+    popupContainer.style.display = "none";
+
+    // Redirect ke halaman login atau halaman lain yang sesuai
+    window.location.href = "booking.html"; // Ganti dengan halaman tujuan yang sesuai
+}
+
+
     // Simulasikan informasi pengguna yang masuk
     const user = {
         name: 'Nama Pengguna',

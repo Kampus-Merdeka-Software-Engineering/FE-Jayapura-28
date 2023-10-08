@@ -11,40 +11,44 @@ signupHeader.addEventListener("click", () => {
 wrapper.classList.remove("active");
 });
 
-// Login
+
+
 const loginForm = document.getElementById("login-Form");
 const message = document.getElementById("message");
 
-loginForm.addEventListener("submit", async (e) => {
-  e.preventDefault();
+loginForm.addEventListener("submit", async(e) => {
+    e.preventDefault();
 
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
 
-  try {
-    const response = await fetch("http://localhost:5000/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, password }),
-    });
+    try {
+        const response = await fetch("http://localhost:5000/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email, password }),
+        });
 
-    const data = await response.json();
+        const data = await response.json();
 
-    if (response.ok) {
-      message.innerText = data.message;
-      window.location.href = "index.html";
-      // Redirect atau tampilkan halaman beranda setelah login berhasil
-    } else {
-      message.innerText = data.message;
+        if (response.ok) {
+            const { token } = data.data;
+            console.log(data);
+            // Simpan token di local storage atau cookie untuk penggunaan berikutnya
+            localStorage.setItem("token", token);
+
+            message.innerText = data.message;
+            window.location.href = "index.html";
+            // Redirect atau tampilkan halaman beranda setelah login berhasil
+        } else {
+            message.innerText = data.message;
+        }
+    } catch (error) {
+        console.error("Error:", error);
     }
-  } catch (error) {
-    console.error("Error:", error);
-  }
 });
-
-
 
 // Register
 const regisForm = document.getElementById("regisForm");

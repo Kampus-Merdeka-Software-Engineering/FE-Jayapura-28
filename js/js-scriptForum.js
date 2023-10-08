@@ -4,6 +4,37 @@ document.addEventListener("DOMContentLoaded", function () {
     const USER_STORAGE_KEY = "forum_user";
     const MESSAGES_STORAGE_KEY = "forum_messages";
 
+
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+        // Pengguna belum login, alihkan ke halaman login
+        alert("anda belum login");
+        window.location.href = "login.html #login-Form";
+    } else {
+        // Validasi token di sini (gunakan fungsi yang sesuai)
+        if (!isValidToken(token)) {
+            // Token tidak valid, alihkan ke halaman login
+            window.location.href = "login.html #login-Form";
+        }
+
+        // Mengirimkan permintaan booking dengan token dalam header
+        fetch("http://localhost:5000/forum", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`, // Mengirim token sebagai bagian dari header
+                },
+                // ... data booking
+            })
+            .then((res) => {
+                res.status(200);
+            })
+            .catch((error) => {
+                res.status(500).json({ error: error.message });
+            });
+    }
+
     // Mengambil nama pengguna dari localStorage jika ada
     const savedUser = localStorage.getItem(USER_STORAGE_KEY);
     if (savedUser) {
