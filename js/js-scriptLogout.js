@@ -12,7 +12,7 @@ function logout() {
     popupContainer.style.display = "none";
 
     // Redirect ke halaman login atau halaman lain yang sesuai
-    window.location.href = "booking.html"; // Ganti dengan halaman tujuan yang sesuai
+    window.location.href = "index.html"; // Ganti dengan halaman tujuan yang sesuai
 }
 
 

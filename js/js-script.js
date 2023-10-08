@@ -11,12 +11,12 @@
 if (!token) {
     // Pengguna belum login, alihkan ke halaman login
     alert("anda belum login");
-    window.location.href = "login.html #login-Form";
+    window.location.href = "login.html#login-Form";
 } else {
     // Validasi token di sini (gunakan fungsi yang sesuai)
     if (!isValidToken(token)) {
         // Token tidak valid, alihkan ke halaman login
-        window.location.href = "login.html #login-Form";
+        window.location.href = "login.html#login-Form";
     }
 
     // Mengirimkan permintaan booking dengan token dalam header
