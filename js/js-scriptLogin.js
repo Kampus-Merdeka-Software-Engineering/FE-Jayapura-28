@@ -50,6 +50,22 @@ loginForm.addEventListener("submit", async(e) => {
     }
 });
 
+  // Periksa status login
+  const isLoggedIn = true; // Gantilah ini dengan cara yang sesuai untuk memeriksa status login
+
+  // Tampilkan atau sembunyikan menu sesuai dengan status login
+  const loginMenu = document.getElementById("login-Form");
+  const logoutMenu = document.getElementById("profileImage");
+
+  if (isLoggedIn) {
+    loginMenu.style.display = "none";
+    logoutMenu.style.display = "block";
+  } else {
+    loginMenu.style.display = "block";
+    logoutMenu.style.display = "none";
+  }
+
+
 // Register
 const regisForm = document.getElementById("regisForm");
 const message1 = document.getElementById("message1");
