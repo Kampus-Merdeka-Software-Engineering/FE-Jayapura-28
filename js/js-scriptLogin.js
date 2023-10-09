@@ -76,7 +76,7 @@ regisForm.addEventListener("submit", async (e) => {
 
     if (response.ok) {
       message1.innerText = data.message;
-      window.location.href = "login.html#login-Form";
+      window.location.href = "login.html#login";
       // Redirect atau tampilkan halaman beranda setelah login berhasil
     } else {
       message1.innerText = data.message;

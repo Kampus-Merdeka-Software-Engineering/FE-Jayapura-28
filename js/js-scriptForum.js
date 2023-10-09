@@ -9,15 +9,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!token) {
         // Pengguna belum login, alihkan ke halaman login
-        alert("anda belum login");
-        window.location.href = "login.html#login-Form";
+        alert("you are not logged in yet");
+        window.location.href = "login.html#login";
     } else {
         // Validasi token di sini (gunakan fungsi yang sesuai)
         if (!isValidToken(token)) {
             // Token tidak valid, alihkan ke halaman login
-            window.location.href = "login.html#login-Form";
+            alert("Incorrect email or password");
+            window.location.href = "login.html#login";
         }
-
         // Mengirimkan permintaan booking dengan token dalam header
         fetch("https://be-jayapura-28-production-10e1.up.railway.app/forum", {
                 method: "POST",
