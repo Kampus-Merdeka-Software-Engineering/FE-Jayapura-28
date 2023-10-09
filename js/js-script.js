@@ -21,7 +21,7 @@ if (!token) {
     }
 
     // Mengirimkan permintaan booking dengan token dalam header
-    fetch("https://be-jayapura-28-production-10e1.up.railway.app/booking", {
+    fetch("https://be-jayapura-28-production-015b.up.railway.app/booking", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
