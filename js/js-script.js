@@ -6,36 +6,6 @@
     const hasilTabel = document.getElementById("hasilTabel");
     const downloadButton = document.getElementById("downloadButton");
 
-    const token = localStorage.getItem("token");
-
-if (!token) {
-    // Pengguna belum login, alihkan ke halaman login
-    alert("you are not logged in yet");
-    window.location.href = "login.html#login";
-} else {
-    // Validasi token di sini (gunakan fungsi yang sesuai)
-    if (!isValidToken(token)) {
-        // Token tidak valid, alihkan ke halaman login
-        alert("Incorrect email or password");
-        window.location.href = "login.html#login";
-    }
-
-    // Mengirimkan permintaan booking dengan token dalam header
-    fetch("https://be-jayapura-28-production-015b.up.railway.app/booking", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${token}`, // Mengirim token sebagai bagian dari header
-            },
-            // ... data booking
-        })
-        .then((res) => {
-            res.status(200);
-        })
-        .catch((error) => {
-            res.status(500).json({ error: error.message });
-        });
-}
 
     // Data rumah sakit, spesialis, dan dokter dalam bentuk array
     const dataRumahSakit = [
@@ -218,4 +188,36 @@ if (!token) {
         };
         html2pdf().from(element).set(pdfOptions).save();
     });
+
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+        // Pengguna belum login, alihkan ke halaman login
+        alert("you are not logged in yet");
+        window.location.href = "login.html#login";
+    } else {
+        // Validasi token di sini (gunakan fungsi yang sesuai)
+        if (!isValidToken(token)) {
+            // Token tidak valid, alihkan ke halaman login
+            alert("Incorrect email or password");
+            window.location.href = "login.html#login";
+        }
+    
+        // Mengirimkan permintaan booking dengan token dalam header
+        fetch("https://be-jayapura-28-production-015b.up.railway.app/booking", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`, // Mengirim token sebagai bagian dari header
+                },
+                // ... data booking
+            })
+            .then((res) => {
+                res.status(200);
+            })
+            .catch((error) => {
+                res.status(500).json({ error: error.message });
+            });
+    }
+    
 });

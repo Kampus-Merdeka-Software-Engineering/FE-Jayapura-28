@@ -5,36 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const MESSAGES_STORAGE_KEY = "forum_messages";
 
 
-    const token = localStorage.getItem("token");
-
-    if (!token) {
-        // Pengguna belum login, alihkan ke halaman login
-        alert("you are not logged in yet");
-        window.location.href = "login.html#login";
-    } else {
-        // Validasi token di sini (gunakan fungsi yang sesuai)
-        if (!isValidToken(token)) {
-            // Token tidak valid, alihkan ke halaman login
-            alert("Incorrect email or password");
-            window.location.href = "login.html#login";
-        }
-        // Mengirimkan permintaan booking dengan token dalam header
-        fetch("https://be-jayapura-28-production-10e1.up.railway.app/forum", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    Authorization: `Bearer ${token}`, // Mengirim token sebagai bagian dari header
-                },
-                // ... data booking
-            })
-            .then((res) => {
-                res.status(200);
-            })
-            .catch((error) => {
-                res.status(500).json({ error: error.message });
-            });
-    }
-
+  
     // Mengambil nama pengguna dari localStorage jika ada
     const savedUser = localStorage.getItem(USER_STORAGE_KEY);
     if (savedUser) {
@@ -131,4 +102,35 @@ document.addEventListener("DOMContentLoaded", function () {
     backButton.addEventListener("click", function () {
         window.history.back();
     });
+
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+        // Pengguna belum login, alihkan ke halaman login
+        alert("you are not logged in yet");
+        window.location.href = "login.html#login";
+    } else {
+        // Validasi token di sini (gunakan fungsi yang sesuai)
+        if (!isValidToken(token)) {
+            // Token tidak valid, alihkan ke halaman login
+            alert("Incorrect email or password");
+            window.location.href = "login.html#login";
+        }
+        // Mengirimkan permintaan booking dengan token dalam header
+        fetch("https://be-jayapura-28-production-10e1.up.railway.app/forum", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`, // Mengirim token sebagai bagian dari header
+                },
+                // ... data booking
+            })
+            .then((res) => {
+                res.status(200);
+            })
+            .catch((error) => {
+                res.status(500).json({ error: error.message });
+            });
+    }
+
 });
