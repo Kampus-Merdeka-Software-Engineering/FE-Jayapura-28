@@ -173,7 +173,7 @@
     });
 
     downloadButton.addEventListener("click", function () {
-        // Konversi elemen hasil booking menjadi PDF (seperti yang telah dijelaskan sebelumnya)
+        // Konversi elemen hasil booking menjadi PDF 
         const element = document.getElementById("hasilBooking");
         const pdfOptions = {
             margin: 10,

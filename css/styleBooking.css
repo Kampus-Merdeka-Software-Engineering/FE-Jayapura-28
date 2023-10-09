@@ -65,14 +65,14 @@ label {
 .styled-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px auto;
-    font-size: 1.2em;
+    margin: 15px auto;
+    font-size: 0.8em;
 }
 
 .styled-table th {
     background-color: beige;
     padding: 12px 15px;
-    text-align: left;
+    text-align: center;
     border: 1px solid;
     color: #1f1d1d;
    
@@ -88,16 +88,16 @@ label {
 
 @media screen and (max-width : 991.98px) {
     .styled-table {
-        width: 50%;
+        width: 80%;
         border-collapse: collapse;
-        margin: 10px auto;
-        font-size: 0.7em;
+        margin: 5px auto;
+        font-size: 0.5em;
     }
     
     .styled-table th {
         background-color: beige;
         padding: 2px 3px;
-        text-align: left;
+        text-align: center;
         border: 1px solid;
         color: #1f1d1d;
        

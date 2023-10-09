@@ -23,7 +23,7 @@ logoutButton.addEventListener('click', async () => {
 
         if (response.redirected) {
             // Jika server mengarahkan kembali ke halaman log in, maka pengguna diarahkan ke sana
-            window.location.href = response.url;
+            window.location.href = 'index.html';
         }
     } catch (error) {
         console.error('Error logging out:', error);

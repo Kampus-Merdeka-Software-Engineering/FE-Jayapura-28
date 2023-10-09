@@ -472,7 +472,13 @@ footer p{
     margin: 3px 0;
 }
 
-
+.profile img{
+    margin-top: 30px;
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 .profile h2{
     text-align: center;
     font-size: 30px;
