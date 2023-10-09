@@ -10,23 +10,24 @@ function setLogoutButtonVisibility(loggedIn) {
     }
 }
 
+
 // Ketika tombol "Log Out" diklik
-logoutButton.addEventListener('click', () => {
-    fetch('https://be-jayapura-28-production-015b.up.railway.app/logout', {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    .then((response) => {
+logoutButton.addEventListener('click', async () => {
+    try {
+        const response = await fetch('https://be-jayapura-28-production-015b.up.railway.app/logout', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
         if (response.redirected) {
             // Jika server mengarahkan kembali ke halaman log in, maka pengguna diarahkan ke sana
-            window.location.href =  "index.html";
+            window.location.href = response.url;
         }
-    })
-    .catch((error) => {
+    } catch (error) {
         console.error('Error logging out:', error);
-    });
+    }
 });
 
 // Panggil fungsi setLogoutButtonVisibility() saat halaman dimuat
