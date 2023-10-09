@@ -4,7 +4,6 @@
     const popupContainer = document.getElementById('popupContainer');
     const logoutButton = document.getElementById('logoutButton');
 
-
 // Fungsi untuk logout pengguna
 function logout() {
     // Hapus token dari localStorage, sessionStorage, atau cookie
@@ -37,3 +36,5 @@ function logout() {
 
     profileImage.addEventListener('click', showProfilePopup);
     logoutButton.addEventListener('click', logoutUser);
+
+
