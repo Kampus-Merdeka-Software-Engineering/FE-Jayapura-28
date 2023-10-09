@@ -1,40 +1,40 @@
+// JavaScript di halaman Anda
+const logoutButton = document.getElementById('logoutButton');
 
-    // JavaScript untuk menampilkan pop-up saat gambar profil diklik
-    const profileImage = document.getElementById('profileImage');
-    const popupContainer = document.getElementById('popupContainer');
-    const logoutButton = document.getElementById('logoutButton');
-
-// Fungsi untuk logout pengguna
-function logout() {
-    // Hapus token dari localStorage, sessionStorage, atau cookie
-    localStorage.removeItem("token");
-    popupContainer.style.display = "none";
-
-    // Redirect ke halaman login atau halaman lain yang sesuai
-    window.location.href = "profile.html"; // Ganti dengan halaman tujuan yang sesuai
+// Fungsi untuk mengatur tampilan tombol "Log Out" berdasarkan status login
+function setLogoutButtonVisibility(loggedIn) {
+    if (loggedIn) {
+        logoutButton.style.display = 'inline-block'; // Menampilkan tombol "Log Out"
+    } else {
+        logoutButton.style.display = 'none'; // Menyembunyikan tombol "Log Out"
+    }
 }
 
+// Ketika tombol "Log Out" diklik
+logoutButton.addEventListener('click', () => {
+    fetch('https://be-jayapura-28-production-015b.up.railway.app/logout', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then((response) => {
+        if (response.redirected) {
+            // Jika server mengarahkan kembali ke halaman log in, maka pengguna diarahkan ke sana
+            window.location.href =  "index.html";
+        }
+    })
+    .catch((error) => {
+        console.error('Error logging out:', error);
+    });
+});
 
-    // Simulasikan informasi pengguna yang masuk
-    const user = {
-        name: 'Nama Pengguna',
-        profileImageURL: 'img/logo.jpeg'
-    };
+// Panggil fungsi setLogoutButtonVisibility() saat halaman dimuat
+document.addEventListener('DOMContentLoaded', () => {
+    // Lakukan pengecekan status login pada server dan terima status login dari server
+    // Misalnya, setelah pengguna berhasil login, atur loggedIn menjadi true
+    const loggedIn = true; // Gantilah dengan status login yang sesuai dari server
 
-    // Fungsi untuk menampilkan pop-up saat gambar profil diklik
-    function showProfilePopup() {
-        popupContainer.style.display = 'block';
-    }
-
-    // Fungsi untuk logout pengguna
-    function logoutUser() {
-        // Tambahkan kode logout sesuai dengan kebutuhan aplikasi Anda
-        // Misalnya, hapus token sesi atau hapus data sesi.
-        // Setelah logout, sembunyikan pop-up
-        popupContainer.style.display = 'none';
-    }
-
-    profileImage.addEventListener('click', showProfilePopup);
-    logoutButton.addEventListener('click', logoutUser);
-
-
+    // Panggil fungsi untuk mengatur tampilan tombol "Log Out" berdasarkan status login saat halaman dimuat
+    setLogoutButtonVisibility(loggedIn);
+});
