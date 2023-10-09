@@ -39,19 +39,19 @@ if (!token) {
     // Data rumah sakit, spesialis, dan dokter dalam bentuk array
     const dataRumahSakit = [
         {
-            name: "RSUD Boven Digeol",
+            name: "RSUD Boven Digoel",
             spesialis: [
                 {
-                    name: "Spesialis X",
-                    dokter: ["Dokter 1X", "Dokter 2X", "Dokter 3X"],
+                    name: "Spesialis Jantung",
+                    dokter: ["dr. Ade Imasanti, Sp.JP", "dr. Achmad Yusri, Sp.JP", "dr. Bobby Sanders, Sp.JP"],
                 },
                 {
-                    name: "Spesialis Y",
-                    dokter: ["Dokter 1Y", "Dokter 2Y", "Dokter 3Y"],
+                    name: "Spesialis Paru",
+                    dokter: ["dr. Eddy Suratman, Sp.P", "dr. Iwan Derma, Sp.P", "dr. Leonardo Simanjuntak, Sp.P"],
                 },
                 {
-                    name: "Spesialis U",
-                    dokter: ["Dokter 1Y", "Dokter 2Y", "Dokter 3Y"],
+                    name: "Spesialis Penyakit Dalam",
+                    dokter: ["dr. Abdul Haris, Sp.PD", "dr. Edward Faisal, Sp.PD", "dr. Ferica Valentine, Sp.PD"],
                 },
             ],
         },
@@ -59,16 +59,16 @@ if (!token) {
             name: "RSUD Kwaingga",
             spesialis: [
                 {
-                    name: "Spesialis Z",
-                    dokter: ["Dokter 1Z", "Dokter 2Z", "Dokter 3Z"],
+                    name: "Spesialis Jantung",
+                    dokter: ["dr. Benny Hartono, Sp.JP", "dr. Denio Adrianus, Sp.JP", "dr. Ferry Christian, Sp.JP"],
                 },
                 {
-                    name: "Spesialis Y",
-                    dokter: ["Dokter 1Y", "Dokter 2Y", "Dokter 3Y"],
+                    name: "Spesialis Paru",
+                    dokter: ["dr. Frans Abednego", "dr. Bobby Saunders, Sp.P", "dr. Naria Seotauli, Sp.P"],
                 },
                 {
-                    name: "Spesialis U",
-                    dokter: ["Dokter 1Y", "Dokter 2Y", "Dokter 3Y"],
+                    name: "Spesialis Penyakit Dalam",
+                    dokter: ["dr. Adry Tendean, Sp.PD", "dr. Daniel Gunawan, Sp.PD", "dr. Edy Mulyana, Sp.PD"],
                 },
                 
             ],
@@ -77,16 +77,16 @@ if (!token) {
             name: "RSUD Kabupaten Mappi",
             spesialis: [
                 {
-                    name: "Spesialis P",
-                    dokter: ["Dokter 1P", "Dokter 2P", "Dokter 3P"],
+                    name: "Spesialis Jantung",
+                    dokter: ["dr. Friens Sinaga, Sp.JP", "dr. Harris Hasan , Sp.JP", "dr. Henny Tantono, Sp.JP"],
                 },
                 {
-                    name: "Spesialis Y",
-                    dokter: ["Dokter 1Y", "Dokter 2Y", "Dokter 3Y"],
+                    name: "Spesialis Paru",
+                    dokter: ["dr. Jamal Zaini, Sp.P", "dr. Magy Satolom, Sp.P", "dr. Megantara, Sp.P"],
                 },
                 {
-                    name: "Spesialis U",
-                    dokter: ["Dokter 1Y", "Dokter 2Y", "Dokter 3Y"],
+                    name: "Spesialis Penyakit Dalam",
+                    dokter: ["dr. Aluisha Saboe, Sp.PD", "dr. Candra Wibowo, Sp.PD", "dr. Erik Purba, Sp.PD"],
                 },
                
             ],
@@ -95,16 +95,16 @@ if (!token) {
             name: "RSUD Paniai",
             spesialis: [
                 {
-                    name: "Spesialis Q",
-                    dokter: ["Dokter 1Q", "Dokter 2Q", "Dokter 3Q"],
+                    name: "Spesialis Jantung",
+                    dokter: ["dr. Hermawan, Sp.JP", "dr. I Gede Sumantra, Sp.JP", "dr. Johan Winata, Sp.JP"],
                 },
                 {
-                    name: "Spesialis Y",
-                    dokter: ["Dokter 1Y", "Dokter 2Y", "Dokter 3Y"],
+                    name: "Spesialis Paru",
+                    dokter: ["dr. Jaka Pradipta, Sp.P", "dr. Jerry Indra, Sp.P", "dr. Nora Amalia, Sp.P"],
                 },
                 {
-                    name: "Spesialis U",
-                    dokter: ["Dokter 1Y", "Dokter 2Y", "Dokter 3Y"],
+                    name: "Spesialis Penyakit Dalam",
+                    dokter: ["dr. Albertus Daniel, Sp.PD", "dr. David Santosa, Sp.PD", "dr. Eva Carolina, Sp.PD"],
                 },
                
             ],
