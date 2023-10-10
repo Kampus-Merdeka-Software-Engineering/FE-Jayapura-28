@@ -74,7 +74,8 @@ button:hover {
     }
 
     .form-saran img{
-        display: none;
+        display: flex;
+        width: 350px;
     }
 
 
