@@ -16,6 +16,7 @@ wrapper.classList.remove("active");
 const loginForm = document.getElementById("login-Form");
 const message = document.getElementById("message");
 
+// tambahan
 function isValidEmail(email) {
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   return emailRegex.test(email);
@@ -27,6 +28,7 @@ loginForm.addEventListener("submit", async(e) => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
+    // tambahan
       if (!isValidEmail(email)) {
         alert('Alamat email tidak valid');
         return;

@@ -1,41 +1,31 @@
-// JavaScript di halaman Anda
-const logoutButton = document.getElementById('logoutButton');
+// Frontend code
 
-// Fungsi untuk mengatur tampilan tombol "Log Out" berdasarkan status login
-function setLogoutButtonVisibility(loggedIn) {
-    if (loggedIn) {
-        logoutButton.style.display = 'inline-block'; // Menampilkan tombol "Log Out"
-    } else {
-        logoutButton.style.display = 'none'; // Menyembunyikan tombol "Log Out"
-    }
-}
+const logoutButton = document.getElementById('logout-button');
 
-
-// Ketika tombol "Log Out" diklik
 logoutButton.addEventListener('click', async () => {
-    try {
-        const response = await fetch('https://be-jayapura-28-production-015b.up.railway.app/logout', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
+  try {
+    // Mengirim permintaan logout ke server
+    const response = await fetch('https://be-jayapura-28-production-015b.up.railway.app/logout', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        // Sertakan token atau informasi otentikasi lainnya jika diperlukan
+        // Anda mungkin perlu menyimpan token di localStorage atau cookie untuk penggunaan logout
+        'Authorization': `Bearer ${localStorage.getItem('token')}`,
+      },
+    });
 
-        if (response.redirected) {
-            // Jika server mengarahkan kembali ke halaman log in, maka pengguna diarahkan ke sana
-            window.location.href = 'index.html';
-        }
-    } catch (error) {
-        console.error('Error logging out:', error);
+    if (response.ok) {
+      // Logout berhasil, hapus token atau data sesi di client-side
+      localStorage.removeItem('token');
+
+      // Redirect atau tampilkan pesan sukses
+      window.location.href = 'login.html#login';
+    } else {
+      // Logout gagal, tampilkan pesan kesalahan
+      console.error('Logout gagal');
     }
-});
-
-// Panggil fungsi setLogoutButtonVisibility() saat halaman dimuat
-document.addEventListener('DOMContentLoaded', () => {
-    // Lakukan pengecekan status login pada server dan terima status login dari server
-    // Misalnya, setelah pengguna berhasil login, atur loggedIn menjadi true
-    const loggedIn = true; // Gantilah dengan status login yang sesuai dari server
-
-    // Panggil fungsi untuk mengatur tampilan tombol "Log Out" berdasarkan status login saat halaman dimuat
-    setLogoutButtonVisibility(loggedIn);
+  } catch (error) {
+    console.error('Error:', error);
+  }
 });
