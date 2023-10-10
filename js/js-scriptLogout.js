@@ -17,7 +17,6 @@ if (token) {
   } else {
     // Pengguna belum login, sembunyikan tombol logout
     logoutButton.style.display = 'none';
-    singUp.style.display = 'block';
   }
   
   
