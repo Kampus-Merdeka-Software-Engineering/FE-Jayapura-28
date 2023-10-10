@@ -2,13 +2,18 @@
 const logoutButton = document.getElementById('logoutButton');
 
 // Fungsi untuk mengatur tampilan tombol "Log Out" berdasarkan status login
-function setLogoutButtonVisibility(loggedIn) {
-    if (loggedIn) {
-        logoutButton.style.display = 'inline-block'; // Menampilkan tombol "Log Out"
-    } else {
-        logoutButton.style.display = 'none'; // Menyembunyikan tombol "Log Out"
-    }
+// Mendapatkan token dari penyimpanan lokal (localStorage)
+const token = localStorage.getItem('token');
+
+// Memeriksa apakah pengguna sudah login
+if (token) {
+  // Pengguna sudah login, tampilkan tombol logout
+  logoutButton.style.display = 'block';
+} else {
+  // Pengguna belum login, sembunyikan tombol logout
+  logoutButton.style.display = 'none';
 }
+
 
 logoutButton.addEventListener('click', async () => {
   try {
