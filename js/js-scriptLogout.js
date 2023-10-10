@@ -56,7 +56,10 @@ const logoutButton = document.getElementById('logout-button');
 const loginButton = document.getElementById('loginBtn');
 
 
-
+document.addEventListener('DOMContentLoaded', function() {
+    // Tempatkan kode JavaScript Anda di sini
+ 
+  
 // Event listener untuk tombol logout
 logoutButton.addEventListener('click', () => {
   // Hapus token dari penyimpanan lokal
@@ -76,3 +79,4 @@ logoutButton.addEventListener('click', () => {
 //     // ...
 //   });
 // }
+});
