@@ -44,10 +44,6 @@ const logoutButton = document.getElementById('logoutButton');
 // Mendapatkan token dari penyimpanan lokal (localStorage)
 const token = localStorage.getItem('token');
 
-
-
-
-
 document.addEventListener('DOMContentLoaded', function() {
     // Tempatkan kode JavaScript Anda di sini
  // Memeriksa apakah pengguna sudah login
@@ -64,8 +60,8 @@ if (token) {
 logoutButton.addEventListener('click', () => {
   // Hapus token dari penyimpanan lokal
   localStorage.removeItem('token');
-  window.location.href = 'login.html#login';
-
+  window.location.href = 'index.html';
+  alert('logout Sucess');
   // Sembunyikan tombol logout
   logoutButton.style.display = 'none';
 
