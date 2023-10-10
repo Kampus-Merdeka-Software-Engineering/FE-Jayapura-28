@@ -1,6 +1,14 @@
-// Frontend code
+// JavaScript di halaman Anda
+const logoutButton = document.getElementById('logoutButton');
 
-const logoutButton = document.getElementById('logout-button');
+// Fungsi untuk mengatur tampilan tombol "Log Out" berdasarkan status login
+function setLogoutButtonVisibility(loggedIn) {
+    if (loggedIn) {
+        logoutButton.style.display = 'inline-block'; // Menampilkan tombol "Log Out"
+    } else {
+        logoutButton.style.display = 'none'; // Menyembunyikan tombol "Log Out"
+    }
+}
 
 logoutButton.addEventListener('click', async () => {
   try {
