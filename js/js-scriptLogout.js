@@ -5,18 +5,6 @@
 // // Mendapatkan token dari penyimpanan lokal (localStorage)
 // const token = localStorage.getItem('token');
 
-// Mendapatkan token dari penyimpanan lokal (localStorage)
-const token = localStorage.getItem('token');
-
-
-// Memeriksa apakah pengguna sudah login
-if (token) {
-  // Pengguna sudah login, tampilkan tombol logout
-  logoutButton.style.display = 'block';
-} else {
-  // Pengguna belum login, sembunyikan tombol logout
-  logoutButton.style.display = 'none';
-}
 
 
 // logoutButton.addEventListener('click', async () => {
@@ -54,11 +42,24 @@ const logoutButton = document.getElementById('logout-button');
 
 // Mendapatkan tombol login (opsional)
 const loginButton = document.getElementById('loginBtn');
+// Mendapatkan token dari penyimpanan lokal (localStorage)
+const token = localStorage.getItem('token');
+
+
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
     // Tempatkan kode JavaScript Anda di sini
- 
+ // Memeriksa apakah pengguna sudah login
+if (token) {
+    // Pengguna sudah login, tampilkan tombol logout
+    logoutButton.style.display = 'block';
+  } else {
+    // Pengguna belum login, sembunyikan tombol logout
+    logoutButton.style.display = 'none';
+  }
+  
   
 // Event listener untuk tombol logout
 logoutButton.addEventListener('click', () => {
