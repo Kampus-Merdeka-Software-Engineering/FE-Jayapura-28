@@ -38,10 +38,9 @@
 // Frontend code
 
 // Mendapatkan tombol logout
-const logoutButton = document.getElementById('logout-button');
+const logoutButton = document.getElementById('logoutButton');
 
 // Mendapatkan tombol login (opsional)
-const loginButton = document.getElementById('loginBtn');
 // Mendapatkan token dari penyimpanan lokal (localStorage)
 const token = localStorage.getItem('token');
 
