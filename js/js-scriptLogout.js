@@ -5,14 +5,18 @@
 // // Mendapatkan token dari penyimpanan lokal (localStorage)
 // const token = localStorage.getItem('token');
 
-// // Memeriksa apakah pengguna sudah login
-// if (token) {
-//   // Pengguna sudah login, tampilkan tombol logout
-//   logoutButton.style.display = 'block';
-// } else {
-//   // Pengguna belum login, sembunyikan tombol logout
-//   logoutButton.style.display = 'none';
-// }
+// Mendapatkan token dari penyimpanan lokal (localStorage)
+const token = localStorage.getItem('token');
+
+
+// Memeriksa apakah pengguna sudah login
+if (token) {
+  // Pengguna sudah login, tampilkan tombol logout
+  logoutButton.style.display = 'block';
+} else {
+  // Pengguna belum login, sembunyikan tombol logout
+  logoutButton.style.display = 'none';
+}
 
 
 // logoutButton.addEventListener('click', async () => {
@@ -51,23 +55,7 @@ const logoutButton = document.getElementById('logout-button');
 // Mendapatkan tombol login (opsional)
 const loginButton = document.getElementById('loginBtn');
 
-// Mendapatkan token dari penyimpanan lokal (localStorage)
-const token = localStorage.getItem('token');
 
-// Memeriksa apakah token ada (pengguna sudah login)
-if (token) {
-  // Pengguna sudah login, tampilkan tombol logout dan sembunyikan tombol login (jika ada)
-  logoutButton.style.display = 'block';
-  if (loginButton) {
-    loginButton.style.display = 'none';
-  }
-} else {
-  // Pengguna belum login, sembunyikan tombol logout dan tampilkan tombol login (jika ada)
-  logoutButton.style.display = 'none';
-  if (loginButton) {
-    loginButton.style.display = 'block';
-  }
-}
 
 // Event listener untuk tombol logout
 logoutButton.addEventListener('click', () => {
