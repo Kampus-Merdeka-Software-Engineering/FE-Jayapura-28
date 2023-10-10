@@ -61,14 +61,12 @@ const loginButton = document.getElementById('loginBtn');
 logoutButton.addEventListener('click', () => {
   // Hapus token dari penyimpanan lokal
   localStorage.removeItem('token');
+  window.location.href = 'login.html#login';
 
   // Sembunyikan tombol logout
   logoutButton.style.display = 'none';
 
   // Tampilkan tombol login (opsional)
-  if (loginButton) {
-    loginButton.style.display = 'block';
-  }
 });
 
 // // Event listener untuk tombol login (opsional)
