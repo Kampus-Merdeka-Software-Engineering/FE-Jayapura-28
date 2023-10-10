@@ -2,7 +2,7 @@
 
 // Mendapatkan tombol logout
 const logoutButton = document.getElementById('logoutButton');
-
+const singUp = document.getElementById('signUp');
 // Mendapatkan tombol login (opsional)
 // Mendapatkan token dari penyimpanan lokal (localStorage)
 const token = localStorage.getItem('token');
@@ -13,9 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
 if (token) {
     // Pengguna sudah login, tampilkan tombol logout
     logoutButton.style.display = 'block';
+    singUp.style.display = 'none';
   } else {
     // Pengguna belum login, sembunyikan tombol logout
     logoutButton.style.display = 'none';
+    singUp.style.display = 'block';
   }
   
   
